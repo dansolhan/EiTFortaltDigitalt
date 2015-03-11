@@ -25,7 +25,7 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 	Vector3 leftEdge = new Vector3(-400f, 0f,0f);
 	Vector3 PopupEdgeLeft = new Vector3 (200, 0,1);
 	Vector3 PopupEdgeRight = new Vector3 (1800, 0,1);
-	bool isActive;
+	bool isActiveSlide;
 
 
 	private Vector3 from;
@@ -35,10 +35,9 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 
 	
 	void Awake () {
-		setActive (false);
+		Debug.Log ("Now boom!");
+		setActiveSlide (false);
 		panelController = (PanelControl) this.transform.parent.GetComponent ("PanelControl");
-
-
 
 
 		Canvas canvas = GetComponentInParent <Canvas>();
@@ -80,10 +79,6 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 		to = awayLeft;
 	}
 
-	public void goToLeftQueue() {
-
-	}
-
 	public void OnPointerDown (PointerEventData data) {
 		isDragged = true;
 		panelRectTransform.SetAsLastSibling ();
@@ -95,16 +90,16 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 		isDragged = false;
  		Vector3 myPos = panelRectTransform.localPosition;
 
-		if (panelRectTransform.localPosition.x > rightEdge.x) {
+		if (myPos.x > rightEdge.x) {
 						exitRight ();
 						panelController.nextSlide ();
-				} else if (panelRectTransform.localPosition.x < leftEdge.x) {
+				} else if (myPos.x < leftEdge.x) {
 						exitLeft ();
 						panelController.previousSlide ();
 
 				} else {
-						if (this.isActive) {
-						//		moveToCenter ();
+						if (this.isActiveSlide) {
+							moveToCenter ();
 						}
 				}
 
@@ -112,6 +107,7 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 
 
 	public void OnDrag (PointerEventData data) {
+		Debug.Log ("OwowowwowowowwowoW!");
 		float oldPos = canvasRectTransform.position.y;
 		if (panelRectTransform == null) {
 				return;
@@ -133,13 +129,13 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 	
 	}
 
-	public void setActive(bool active) {
-		this.isActive = active;
+	public void setActiveSlide(bool active) {
+		this.isActiveSlide = active;
 
 	}
 
 	public bool getActive() {
-		return isActive;
+		return isActiveSlide;
 	}
 
 

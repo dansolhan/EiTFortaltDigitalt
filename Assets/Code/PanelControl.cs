@@ -10,16 +10,22 @@ public class PanelControl : MonoBehaviour {
 	public AudioClip onSlideSound;
 	private AudioSource audioSource; 
 
-	// Use this for initialization
-	void Start () {
+	void Awake() {
 		audioSource = (AudioSource) this.GetComponent ("AudioSource");
 		children = new List<Transform>();
-		Debug.Log(transform.childCount.ToString());
-
 		foreach (Transform child in transform) {
 			children.Add(child);
 			Debug.Log(child.name);
 		}
+
+	}
+
+	// Use this for initialization
+	void Start () {
+
+
+		Debug.Log(transform.childCount.ToString());
+
 
 		currentChild = (LekeDra) children [index].gameObject.GetComponent ("LekeDra");
 
@@ -27,20 +33,36 @@ public class PanelControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+			nextSlide();
+				}
+		if (Input.GetKeyDown (KeyCode.RightArrow)) {
+			previousSlide();
+				}
 	
 	}
 
-	void getSlide(string side) {
+	public void startSlider() {
+		index = 0;
+		currentChild = (LekeDra) children [index].gameObject.GetComponent ("LekeDra");
+		getSlide ("left");
+	}
+
+	public void getSlide(string side) {
+		Debug.Log ("Nåværende barn: " + currentChild);
 		audioSource.PlayOneShot (onSlideSound, 100f);
-		currentChild.setActive(false);
+		currentChild.setActiveSlide (false);
+		LekeDra gammel = currentChild;
 		LekeDra lekeDraObject = (LekeDra) children[index].gameObject.GetComponent ("LekeDra");
 		currentChild = lekeDraObject;
-		currentChild.setActive (true);
+		currentChild.setActiveSlide (true);
 		if (side == "right") {
-			currentChild.appearFromRight();
+			gammel.exitRight();
+			currentChild.appearFromLeft();
 				}
 		if (side == "left") {
-			currentChild.appearFromLeft();
+			gammel.exitLeft();
+			currentChild.appearFromRight();
 				}
 	}
 
@@ -53,26 +75,23 @@ public class PanelControl : MonoBehaviour {
 	public void nextSlide() {
 		if (index < children.Count -1) {
 				index += 1;
-				getSlide ("left");
+				getSlide ("right");
 			} else {
 			index = 0;
-			getSlide ("left");
+			getSlide ("right");
 				}
 
 	}
 
 	public void previousSlide() {
-		if (index > 0) {
-			index -= 1;
-			getSlide ("right");
+				if (index > 0) {
+						index -= 1;
+						getSlide ("left");
+				} else {
+						index = children.Count - 1;
+						getSlide ("left");
 				}
-		else {
-			index = children.Count -1;
-			getSlide("right");
 		}
-	}
-
-
 
 
 }
