@@ -1,0 +1,107 @@
+Changelist:
+
+1.1.29:
+    - Fixed bug causing memory overflow in some situations where HyperText was
+      in a layout.
+    - Changed version numbering scheme.
+1.28:
+    - HyperText.HyperlinkEvents will now pass the class name in the LinkInfo
+      argument even when no style is actually defined for the specified class.
+1.27:
+    - Fixed bug that could cause geometry to render at the wrong size when
+      using the rect transform tool in the editor with certain canvas
+      configurations.
+    - Library updates.
+1.26:
+    - Fixed bug returning incorrect preferred height/width for layout.
+1.25:
+    - Fixed bug causing AOT compiler to fail (micro mscorlib stripping level
+      still fails, but will be addressed in next update).
+1.24:
+    - Unify project layout and asset IDs across asset store products.
+1.23:
+    - Fixed bug causing font size to infinitely shrink when toggling links on
+      and off under a scaled canvas.
+    - Fixed bug causing font to sometimes render the incorrect size for one
+      frame when scaling the canvas.
+1.22:
+    - Remove top-level menu for editor library function.
+1.21:
+    - Library updates for 5.0b17 compatibility.
+1.20:
+    - Fixed inspector bug causing exceptions to be thrown in corner cases when
+      adding new custom styles.
+1.19:
+    - Changed HyperTextStyles inspector to improve performance when many styles
+      are defined.
+    - Fixed MissingReferenceException caused when editing HyperTextStyles after
+      deleting a HyperText object that was referencing them.
+    - Library updates.
+1.18:
+    - Changed how masking is applied to quads, which now allows quads with the
+      same Packing ID to batch across HyperText instances.
+    - Minor updates to sample assets.
+    - Library updates.
+1.17:
+    - Horizontal and vertical overflow settings are now respected.
+    - Fixed some possible error messages in builds when styles are deserialized.
+    - 4.6.1f1 is minimum version.
+1.16:
+    - Fixed exceptions when adding new styles.
+1.15:
+    - Fixed bug with class assignment for auto-detected keywords.
+    - Cleared warnings about setting parents when using quads.
+    - Upgraded remaining example prefabs.
+1.14:
+    - Upgraded example scene to account for changes in canvas scaling system.
+    - 4.6.0f3 is minimum version.
+1.13:
+    - Prevent text from disappearing at certain Canvas scale factors.
+    - Library updates.
+    - 4.6.0f1 is minimum version.
+1.12:
+    - Library updates.
+1.11:
+    - Factored text processing functionality into HyperTextProcessor class. You
+      can now use this class to extract indices for links and quads, as well as
+      to apply custom tag styles to text, in order to use hyper text in other
+      places outside the HyperText component.
+    - Fixed bug preventing links from returning to hover state after a press.
+    - Fixed bug causing custom tags' vertical offset to be ignored when using
+      non-dynamic fonts.
+    - Fixed bug preventing some nested tags' scale values from multiplying.
+    - Library updates.
+1.10:
+    - Library updates.
+    - Added tags to assets to improve asset store searchability.
+1.09:
+    - Library updates.
+1.08:
+    - In line with 4.6.0b21 UI.Text component, support scaling non-dynamic fonts
+      via font size property. Set font size to zero to disable.
+    - Fixed bug with HyperTextStyles inspector that prevented link base color
+      from being overridden.
+    - Library updates.
+    - 4.6.0b21 is minimum version.
+1.07:
+    - Fixed bug that could cause text to scale incorrectly when styles were
+      edited.
+1.06:
+    - Fixed bug with link hitboxes not scaling with scaled canvases.
+1.05:
+    - Fixed bug with clipping and scaling of text in scaled canvases.
+    - 4.6.0b20 is minimum version.
+1.04:
+    - Added line spacing to styles.
+    - 4.6.0b19 is minimum version.
+1.03:
+    - Library updates to enhance inspector.
+1.02:
+    - Textures in example folder are no longer compressed, so they won't slow
+      down platform changes.
+    - Updated documentation.
+1.01:
+    - Compatibility update for 4.6.0b18.
+    - Library updates to enhance inspector.
+1.0:
+    - HyperText was released to the world!

@@ -12,57 +12,70 @@ SceneSettings:
     backfaceThreshold: 100
 --- !u!104 &2
 RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
   m_Fog: 0
   m_FogColor: {r: .5, g: .5, b: .5, a: 1}
   m_FogMode: 3
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_AmbientSkyColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_AmbientEquatorColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_AmbientGroundColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
-  m_SpotCookie: {fileID: 0}
-  m_ObjectHideFlags: 0
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
 --- !u!127 &3
 LevelGameManager:
   m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
-  m_LightProbes: {fileID: 0}
-  m_Lightmaps: []
+  serializedVersion: 5
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
-  m_BakedColorSpace: 0
-  m_UseDualLightmapsInForward: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    m_Resolution: 50
-    m_LastUsedResolution: 0
+    serializedVersion: 3
+    m_Resolution: 1
+    m_BakeResolution: 50
     m_TextureWidth: 1024
     m_TextureHeight: 1024
-    m_BounceBoost: 1
-    m_BounceIntensity: 1
-    m_SkyLightColor: {r: .860000014, g: .930000007, b: 1, a: 1}
-    m_SkyLightIntensity: 0
-    m_Quality: 0
-    m_Bounces: 1
-    m_FinalGatherRays: 1000
-    m_FinalGatherContrastThreshold: .0500000007
-    m_FinalGatherGradientThreshold: 0
-    m_FinalGatherInterpolationPoints: 15
-    m_AOAmount: 0
-    m_AOMaxDistance: .100000001
-    m_AOContrast: 1
-    m_LODSurfaceMappingDistance: 1
-    m_Padding: 0
+    m_AOMaxDistance: 1
+    m_Padding: 2
+    m_CompAOExponent: 0
+    m_LightmapParameters: {fileID: 0}
     m_TextureCompression: 0
-    m_LockAtlas: 0
+    m_FinalGather: 0
+    m_FinalGatherRayCount: 1024
+  m_LightmapSnapshot: {fileID: 0}
+  m_RuntimeCPUUsage: 25
 --- !u!196 &5
 NavMeshSettings:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
+    serializedVersion: 2
     agentRadius: .5
     agentHeight: 2
     agentSlope: 45
@@ -71,80 +84,9 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
     minRegionArea: 2
-    widthInaccuracy: 16.666666
-    heightInaccuracy: 10
-  m_NavMesh: {fileID: 0}
---- !u!1 &62795432
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 145542, guid: df5e190727d05044e92355eb11474ad9, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 62795433}
-  - 222: {fileID: 62795435}
-  - 114: {fileID: 62795434}
-  m_Layer: 5
-  m_Name: PaneTitle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &62795433
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22445542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 62795432}
-  m_LocalRotation: {x: 0, y: 0, z: -.000488281221, w: .999999881}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 948078572}
-  m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 138, y: 289}
-  m_SizeDelta: {x: 1076, y: 40}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &62795434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445540, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 62795432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 28
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: '1870-1888
-
-'
---- !u!222 &62795435
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22245542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 62795432}
+    cellSize: .166666657
+    manualCellSize: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &104911337
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +179,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109586912}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -288,6 +231,16 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!4 &109586914
 Transform:
   m_ObjectHideFlags: 0
@@ -327,75 +280,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
---- !u!1 &158002413
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 145542, guid: df5e190727d05044e92355eb11474ad9, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 158002414}
-  - 222: {fileID: 158002416}
-  - 114: {fileID: 158002415}
-  m_Layer: 5
-  m_Name: PaneTitle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &158002414
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22445542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 158002413}
-  m_LocalRotation: {x: 0, y: 0, z: -.000488281221, w: .999999881}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 570708901}
-  m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 95, y: 223}
-  m_SizeDelta: {x: 1076, y: 40}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &158002415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445540, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 158002413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 28
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Allianse mellom Russland og Frankrike
---- !u!222 &158002416
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22245542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 158002413}
 --- !u!1 &167157349
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +404,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1280467906}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .203523383}
   m_AnchorMax: {x: .454871118, y: .890392542}
   m_AnchoredPosition: {x: 501, y: -328}
@@ -529,20 +413,19 @@ RectTransform:
 --- !u!114 &294178261
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445530, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 294178259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -552,10 +435,77 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "I 1888 fikk Tyskland en ny keiser, Wilhelm II. Keiserens ambisjoner om
-    et raskt voksende Tyskland fikk ikke utfolde seg s\xE5 lenge Bismarck satt som
-    kansler. Wilhelm II fikk dermed Bismarck sparket i 1891.. Bismarcks utenrikspolitikk
-    var uhyre komplisert og gikk tvert mot Wilhelms ambisjoner, og systemet fikk forfalle.\r\n"
+  m_Text: "I 1891 ble Bismarck sparket av den nye keiseren, Vilhelm 2. Keiseren forstod
+    ikke alliansesystemet som Bismarck hadde laget, og sluttet derfor \xE5 vedlikeholde
+    det.\r\n\n"
+  m_QuadRenderersPool: []
+  m_AreLinksEnabled: 1
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnRelease:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_TextProcessor:
+    m_LinkKeywordCollections:
+    - m_ClassName: explanation
+      m_Collection: {fileID: 11400000, guid: fbf62e1b62733c14795f0c4f3a5e34b7, type: 2}
+    - m_ClassName: deeper
+      m_Collection: {fileID: 11400000, guid: 25c8acafe18132845b607901c588ba45, type: 2}
+    - m_ClassName: media
+      m_Collection: {fileID: 11400000, guid: eba90565620fe854fb701927a3961d88, type: 2}
+    m_InputText: "I 1891 ble Bismarck sparket av den nye keiseren, Vilhelm 2. Keiseren
+      forstod ikke alliansesystemet som Bismarck hadde laget, og sluttet derfor \xE5
+      vedlikeholde det.\r\n\n"
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_ReferenceFontSize: 43
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: d0aa34716e5e9724fa794f1dc2f42ce9, type: 2}
+    m_TagKeywordCollections:
+    - m_ClassName: 
+      m_Collection: {fileID: 0}
 --- !u!222 &294178262
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -789,75 +739,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1 &401317369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 145542, guid: df5e190727d05044e92355eb11474ad9, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 401317370}
-  - 222: {fileID: 401317372}
-  - 114: {fileID: 401317371}
-  m_Layer: 5
-  m_Name: PaneTitle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &401317370
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22445542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 401317369}
-  m_LocalRotation: {x: 0, y: 0, z: -.000488281221, w: .999999881}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 955930987}
-  m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -48, y: 302}
-  m_SizeDelta: {x: 1076, y: 40}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &401317371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445540, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 401317369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 28
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "M\xE5l med alliansen"
---- !u!222 &401317372
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22245542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 401317369}
 --- !u!1 &401758462
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +769,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: .999971032, y: .999971271, z: .999971151}
   m_Children:
-  - {fileID: 423637718}
   - {fileID: 2032795941}
   - {fileID: 705309929}
   m_Father: {fileID: 566314507}
@@ -957,75 +837,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 401758462}
---- !u!1 &423637717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 145542, guid: df5e190727d05044e92355eb11474ad9, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 423637718}
-  - 222: {fileID: 423637720}
-  - 114: {fileID: 423637719}
-  m_Layer: 5
-  m_Name: PaneTitle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &423637718
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22445542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 423637717}
-  m_LocalRotation: {x: 0, y: 0, z: -.000488281221, w: .999999881}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 401758463}
-  m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 106, y: 196}
-  m_SizeDelta: {x: 1076, y: 40}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &423637719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445540, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 423637717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 28
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: En endelig allianse
---- !u!222 &423637720
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22245542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 423637717}
 --- !u!1 &537460767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +866,7 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 948078572}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .472128928, y: .410439253}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -153, y: 34}
@@ -1144,8 +955,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1199,7 +1010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentChild: {fileID: 0}
-  onSlideSound: {fileID: 8300000, guid: 1d248c5dd8501d44bb7267727e163596, type: 3}
+  onSlideSound: {fileID: 8300000, guid: 31ed828cda067ad41847f188a2e87a6f, type: 3}
 --- !u!82 &566314512
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1207,7 +1018,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 566314506}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1d248c5dd8501d44bb7267727e163596, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1258,6 +1070,16 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &570708900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1110,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: .999970973, y: .99997133, z: .999971151}
   m_Children:
-  - {fileID: 158002414}
   - {fileID: 983021540}
   - {fileID: 1591903340}
   m_Father: {fileID: 566314507}
@@ -1383,32 +1204,31 @@ RectTransform:
   m_GameObject: {fileID: 574118084}
   m_LocalRotation: {x: 0, y: 0, z: -.000488281221, w: .999999881}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .920000017, y: .919999957, z: .919999957}
   m_Children: []
   m_Father: {fileID: 2094911607}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .203523383}
   m_AnchorMax: {x: .454871118, y: .890392542}
-  m_AnchoredPosition: {x: 547, y: 1.5}
-  m_SizeDelta: {x: -120.687805, y: 33.4167328}
+  m_AnchoredPosition: {x: -113, y: 30}
+  m_SizeDelta: {x: -95.8439484, y: 33.4167328}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &574118086
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445530, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 574118084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1418,12 +1238,83 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tyskland begynte ogs\xE5 \xE5 bygge ut en fl\xE5te av krigsskip for \xE5
-    lage kolonier, og dette provoserte Storbritannia. Storbritannia hadde f\xE5 soldater,
-    og var derfor avhengig av \xE5 ha den st\xF8rste skipsfl\xE5ten for \xE5 klare
-    \xE5 forsvare seg og koloniene sine.\r\n\r\nN\xE5 hadde Tyskland blitt uvenn med
-    Russland, de mislyktes med \xE5 hindre Frankrike i \xE5 inng\xE5 allianser, og
-    de hadde provosert Storbritannia. \r\n\n"
+  m_Text: "Tyskland begynte \xE5 bygge ut en fl\xE5te av krigsskip for \xE5 lage kolonier,
+    og dette provoserte Storbritannia. Storbritannia hadde f\xE5 soldater, og var
+    derfor avhengig av \xE5 ha den st\xF8rste skipsfl\xE5ten for \xE5 klare \xE5 forsvare
+    seg og koloniene sine.\r\n\r\nN\xE5 hadde Tyskland blitt uvenn med Russland, de
+    mislyktes med \xE5 hindre Frankrike i \xE5 inng\xE5 allianser, og de hadde provosert
+    Storbritannia. "
+  m_QuadRenderersPool: []
+  m_AreLinksEnabled: 1
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnRelease:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_TextProcessor:
+    m_LinkKeywordCollections:
+    - m_ClassName: explanation
+      m_Collection: {fileID: 11400000, guid: fbf62e1b62733c14795f0c4f3a5e34b7, type: 2}
+    - m_ClassName: deeper
+      m_Collection: {fileID: 11400000, guid: 25c8acafe18132845b607901c588ba45, type: 2}
+    - m_ClassName: media
+      m_Collection: {fileID: 11400000, guid: eba90565620fe854fb701927a3961d88, type: 2}
+    m_InputText: "Tyskland begynte \xE5 bygge ut en fl\xE5te av krigsskip for \xE5
+      lage kolonier, og dette provoserte Storbritannia. Storbritannia hadde f\xE5
+      soldater, og var derfor avhengig av \xE5 ha den st\xF8rste skipsfl\xE5ten for
+      \xE5 klare \xE5 forsvare seg og koloniene sine.\r\n\r\nN\xE5 hadde Tyskland
+      blitt uvenn med Russland, de mislyktes med \xE5 hindre Frankrike i \xE5 inng\xE5
+      allianser, og de hadde provosert Storbritannia. "
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_ReferenceFontSize: 43
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: d0aa34716e5e9724fa794f1dc2f42ce9, type: 2}
+    m_TagKeywordCollections:
+    - m_ClassName: 
+      m_Collection: {fileID: 0}
 --- !u!222 &574118087
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1456,15 +1347,19 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fc1269d72ab707242beb212d09a4fc2c, type: 3}
@@ -1510,29 +1405,28 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 401758463}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .203523383}
   m_AnchorMax: {x: .454871118, y: .890392542}
-  m_AnchoredPosition: {x: 547, y: 1.5}
-  m_SizeDelta: {x: -120.687805, y: 33.4167328}
+  m_AnchoredPosition: {x: 544, y: -39}
+  m_SizeDelta: {x: 60, y: 210}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &705309930
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445530, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 705309928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1542,8 +1436,81 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "De eneste som var igjen i Tyskland allianse var n\xE5 \xD8sterrike-Ungarn,
-    og en l\xF8s allianse med Italia. \r\n\n"
+  m_Text: "De eneste som var igjen i Tysklands allianse var n\xE5 \xD8sterrike-Ungarn
+    og en l\xF8s allianse med Italia. Alliansen deres ble kalt trippelalliansen. Frankrike
+    og Russland hadde ogs\xE5 inngikk en allianse i 1892, og etter hvert ble ogs\xE5
+    Storbritannia med. Storbritannia, Frankrike og Russland ble kalt trippelententen.
+    \r\n\n"
+  m_QuadRenderersPool: []
+  m_AreLinksEnabled: 1
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnRelease:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_TextProcessor:
+    m_LinkKeywordCollections:
+    - m_ClassName: explanation
+      m_Collection: {fileID: 11400000, guid: fbf62e1b62733c14795f0c4f3a5e34b7, type: 2}
+    - m_ClassName: deeper
+      m_Collection: {fileID: 11400000, guid: 25c8acafe18132845b607901c588ba45, type: 2}
+    - m_ClassName: media
+      m_Collection: {fileID: 11400000, guid: eba90565620fe854fb701927a3961d88, type: 2}
+    m_InputText: "De eneste som var igjen i Tysklands allianse var n\xE5 \xD8sterrike-Ungarn
+      og en l\xF8s allianse med Italia. Alliansen deres ble kalt trippelalliansen.
+      Frankrike og Russland hadde ogs\xE5 inngikk en allianse i 1892, og etter hvert
+      ble ogs\xE5 Storbritannia med. Storbritannia, Frankrike og Russland ble kalt
+      trippelententen. \r\n\n"
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_ReferenceFontSize: 43
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: d0aa34716e5e9724fa794f1dc2f42ce9, type: 2}
+    m_TagKeywordCollections:
+    - m_ClassName: 
+      m_Collection: {fileID: 0}
 --- !u!222 &705309931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1610,7 +1577,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: .99999994, y: 1, z: 1}
   m_Children:
-  - {fileID: 62795433}
   - {fileID: 537460768}
   - {fileID: 962682772}
   m_Father: {fileID: 566314507}
@@ -1739,7 +1705,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: .999971032, y: .999971271, z: .999971151}
   m_Children:
-  - {fileID: 401317370}
   - {fileID: 1149675532}
   - {fileID: 1900685944}
   m_Father: {fileID: 566314507}
@@ -1769,20 +1734,19 @@ GameObject:
 --- !u!114 &962682770
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445530, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 962682769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1792,11 +1756,79 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Den fransk-pr\xF8yssiske krigen (1870-1871) f\xF8rte til et samlet tysk
-    rike under Pr\xF8yssens ledelse. I etterkant var forholdet mellom Tyskland og
-    Frankrike sv\xE6rt kaldt, som f\xF8lge av Frankrikes tap og trusselbildet de hadde.
-    For Frankrike var Tyskland den n\xE6rmeste trusselen, mens Tyskland var omringet
-    av Frankrike, \xD8sterrike-Ungarn og Russland.\r\n"
+  m_Text: "Den fransk-pr\xF8yssiske krigen (1870-1871) f\xF8rte til at mange sm\xE5
+    stater samlet seg til et stort rike: Tyskland. Frankrike tapte denne krigen, og
+    var derfor veldig bekymret for dette nye, mektige landet som plutselig oppstod
+    midt i Europa. \r\n\n"
+  m_QuadRenderersPool: []
+  m_AreLinksEnabled: 1
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnRelease:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_TextProcessor:
+    m_LinkKeywordCollections:
+    - m_ClassName: explanation
+      m_Collection: {fileID: 11400000, guid: fbf62e1b62733c14795f0c4f3a5e34b7, type: 2}
+    - m_ClassName: deeper
+      m_Collection: {fileID: 11400000, guid: 25c8acafe18132845b607901c588ba45, type: 2}
+    - m_ClassName: media
+      m_Collection: {fileID: 11400000, guid: eba90565620fe854fb701927a3961d88, type: 2}
+    m_InputText: "Den fransk-pr\xF8yssiske krigen (1870-1871) f\xF8rte til at mange
+      sm\xE5 stater samlet seg til et stort rike: Tyskland. Frankrike tapte denne
+      krigen, og var derfor veldig bekymret for dette nye, mektige landet som plutselig
+      oppstod midt i Europa. \r\n\n"
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_ReferenceFontSize: 43
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: d0aa34716e5e9724fa794f1dc2f42ce9, type: 2}
+    m_TagKeywordCollections:
+    - m_ClassName: 
+      m_Collection: {fileID: 0}
 --- !u!222 &962682771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1816,7 +1848,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 948078572}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .203523383}
   m_AnchorMax: {x: .454871118, y: .890392542}
   m_AnchoredPosition: {x: 445, y: -35}
@@ -1851,7 +1883,7 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1280467906}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .472128928, y: .410439253}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -120, y: 27}
@@ -1915,7 +1947,7 @@ RectTransform:
   m_LocalScale: {x: 1.60000002, y: 1.29999995, z: 1}
   m_Children: []
   m_Father: {fileID: 570708901}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .472128928, y: .410439253}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -114, y: 23}
@@ -1979,10 +2011,10 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 955930987}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .472128928, y: .410439253}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -187, y: 27}
+  m_AnchoredPosition: {x: 109, y: 36}
   m_SizeDelta: {x: 347.533051, y: 235.822021}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1149675533
@@ -1999,7 +2031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 458f4384da8cc7f4a8d063e65126198b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1927e90f1ce0b1243b447d8ad2919212, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2014,75 +2046,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1149675531}
---- !u!1 &1191513124
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 145542, guid: df5e190727d05044e92355eb11474ad9, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1191513125}
-  - 222: {fileID: 1191513127}
-  - 114: {fileID: 1191513126}
-  m_Layer: 5
-  m_Name: PaneTitle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1191513125
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22445542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1191513124}
-  m_LocalRotation: {x: 0, y: 0, z: -.000488281221, w: .999999881}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2094911607}
-  m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 95, y: 193}
-  m_SizeDelta: {x: 1076, y: 40}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &1191513126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445540, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1191513124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 28
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: En feilet allianse
---- !u!222 &1191513127
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22245542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1191513124}
 --- !u!1 &1202615938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2199,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: .9999699, y: .99997133, z: .999971151}
   m_Children:
-  - {fileID: 1670942808}
   - {fileID: 981693999}
   - {fileID: 294178260}
   m_Father: {fileID: 566314507}
@@ -2246,33 +2208,6 @@ RectTransform:
   m_AnchoredPosition: {x: 4275, y: 23}
   m_SizeDelta: {x: 1200.995, y: 600}
   m_Pivot: {x: .5, y: .5}
---- !u!1 &1588515452
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 118698, guid: 7bee0ff27bca07240a4c15c3f565f228, type: 2}
-  m_PrefabInternal: {fileID: 1697210404}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1588515454}
-  m_Layer: 0
-  m_Name: Shutter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1588515454
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 418698, guid: 7bee0ff27bca07240a4c15c3f565f228, type: 2}
-  m_PrefabInternal: {fileID: 1697210404}
-  m_GameObject: {fileID: 1588515452}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
 --- !u!1 &1591903339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,29 +2237,28 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 570708901}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .203523383}
   m_AnchorMax: {x: .454871118, y: .890392542}
-  m_AnchoredPosition: {x: 542, y: 7}
+  m_AnchoredPosition: {x: 543, y: 6}
   m_SizeDelta: {x: -120.687805, y: 30.4167328}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1591903341
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445530, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1591903339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -2335,10 +2269,79 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Tyskland og Russland ble uvenner fordi de sto p\xE5 hver sin side i flere
-    konflikter p\xE5 Balkan, hvor Wilhelm II ogs\xE5 provoserte Russland med vilje.
-    \r\n\r\nResultatet ble at Russland og Frankrike inngikk en allianse, selv om de
-    i utgangspunktet ikke var s\xE6rlig begeistret for hverandre. De hadde ogs\xE5
-    en l\xF8s venneavtale med Storbritannia\r\n"
+    konflikter p\xE5 Balkan.\r\nResultatet ble at Russland og Frankrike svarte med
+    \xE5 inng\xE5 en allianse, selv om de i utgangspunktet ikke var s\xE6rlig begeistret
+    for hverandre. Begge hadde ogs\xE5 hver sin uforpliktende avtale med Storbritannia.\r\n\n\n\n"
+  m_QuadRenderersPool: []
+  m_AreLinksEnabled: 1
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnRelease:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_TextProcessor:
+    m_LinkKeywordCollections:
+    - m_ClassName: explanation
+      m_Collection: {fileID: 11400000, guid: fbf62e1b62733c14795f0c4f3a5e34b7, type: 2}
+    - m_ClassName: deeper
+      m_Collection: {fileID: 11400000, guid: 25c8acafe18132845b607901c588ba45, type: 2}
+    - m_ClassName: media
+      m_Collection: {fileID: 11400000, guid: eba90565620fe854fb701927a3961d88, type: 2}
+    m_InputText: "Tyskland og Russland ble uvenner fordi de sto p\xE5 hver sin side
+      i flere konflikter p\xE5 Balkan.\r\nResultatet ble at Russland og Frankrike
+      svarte med \xE5 inng\xE5 en allianse, selv om de i utgangspunktet ikke var s\xE6rlig
+      begeistret for hverandre. Begge hadde ogs\xE5 hver sin uforpliktende avtale
+      med Storbritannia.\r\n\n\n\n"
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_ReferenceFontSize: 43
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: d0aa34716e5e9724fa794f1dc2f42ce9, type: 2}
+    m_TagKeywordCollections:
+    - m_ClassName: 
+      m_Collection: {fileID: 0}
 --- !u!222 &1591903342
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2346,75 +2349,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1591903339}
---- !u!1 &1670942807
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 145542, guid: df5e190727d05044e92355eb11474ad9, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1670942808}
-  - 222: {fileID: 1670942810}
-  - 114: {fileID: 1670942809}
-  m_Layer: 5
-  m_Name: PaneTitle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1670942808
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22445542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1670942807}
-  m_LocalRotation: {x: 0, y: 0, z: -.000488281221, w: .999999881}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1280467906}
-  m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 95, y: 274}
-  m_SizeDelta: {x: 1076, y: 40}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &1670942809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445540, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1670942807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 28
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Bismarck sparkes
---- !u!222 &1670942810
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22245542, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1670942807}
 --- !u!1001 &1697210404
 Prefab:
   m_ObjectHideFlags: 0
@@ -2461,9 +2395,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 8218698, guid: 7bee0ff27bca07240a4c15c3f565f228, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7bee0ff27bca07240a4c15c3f565f228, type: 2}
-  m_RootGameObject: {fileID: 1588515452}
   m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1820835640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,13 +2422,13 @@ RectTransform:
   m_GameObject: {fileID: 1820835640}
   m_LocalRotation: {x: 0, y: 0, z: -.000488281221, w: .999999881}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.60000002, y: 1.29999995, z: 1}
+  m_LocalScale: {x: 2.09346199, y: 1.70093763, z: 1.30841362}
   m_Children: []
   m_Father: {fileID: 2094911607}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .472128928, y: .410439253}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -122, y: 23}
+  m_AnchoredPosition: {x: 67, y: 58}
   m_SizeDelta: {x: 347.533051, y: 235.822021}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1820835642
@@ -2513,7 +2445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 30d140cda505e8646ae791f21c78f246, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba4d82d72076af046b8f162fb66ecc9f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2596,29 +2528,28 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 955930987}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .203523383}
   m_AnchorMax: {x: .454871118, y: .890392542}
-  m_AnchoredPosition: {x: 692, y: 12}
+  m_AnchoredPosition: {x: 17, y: -21}
   m_SizeDelta: {x: -181.687805, y: 76.4167175}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1900685945
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445530, guid: df5e190727d05044e92355eb11474ad9,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1900685943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5966d34f847d6437a85dbdf20a6a3242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fd22aa062066f144eac27f4f70a6fd4f, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -2628,10 +2559,82 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "I 1888 fikk Tyskland en ny keiser, Wilhelm II. Keiserens ambisjoner om
-    et raskt voksende Tyskland fikk ikke utfolde seg s\xE5 lenge Bismarck satt som
-    kansler. Wilhelm II fikk dermed Bismarck sparket i 1891.. Bismarcks utenrikspolitikk
-    var uhyre komplisert og gikk tvert mot Wilhelms ambisjoner, og systemet fikk forfalle.\r\n"
+  m_Text: "Mange av de europeiske landene s\xE5 p\xE5 dette nye landet, Tyskland,
+    som en stor trussel. Dette visste Tysklands kansler, Otto von Bismarck, som var
+    veldig god i taktikk og strategi. Han satt derfor opp et komplisert system av
+    allianser med landene rundt. M\xE5let med dette var \xE5 holde Russland som venner,
+    og hindre Frankrike i \xE5 alliere seg med noen, samt \xE5 ikke provosere Storbritannia.\r\n\n\n"
+  m_QuadRenderersPool: []
+  m_AreLinksEnabled: 1
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnRelease:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Candlelight.UI.HyperText+HyperlinkEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_TextProcessor:
+    m_LinkKeywordCollections:
+    - m_ClassName: explanation
+      m_Collection: {fileID: 11400000, guid: fbf62e1b62733c14795f0c4f3a5e34b7, type: 2}
+    - m_ClassName: deeper
+      m_Collection: {fileID: 11400000, guid: 25c8acafe18132845b607901c588ba45, type: 2}
+    - m_ClassName: media
+      m_Collection: {fileID: 11400000, guid: eba90565620fe854fb701927a3961d88, type: 2}
+    m_InputText: "Mange av de europeiske landene s\xE5 p\xE5 dette nye landet, Tyskland,
+      som en stor trussel. Dette visste Tysklands kansler, Otto von Bismarck, som
+      var veldig god i taktikk og strategi. Han satt derfor opp et komplisert system
+      av allianser med landene rundt. M\xE5let med dette var \xE5 holde Russland som
+      venner, og hindre Frankrike i \xE5 alliere seg med noen, samt \xE5 ikke provosere
+      Storbritannia.\r\n\n\n"
+    m_IsDynamicFontDesired: 1
+    m_IsRichTextDesired: 1
+    m_ReferenceFontSize: 43
+    m_ShouldOverrideStylesFontSize: 0
+    m_Styles: {fileID: 11400000, guid: d0aa34716e5e9724fa794f1dc2f42ce9, type: 2}
+    m_TagKeywordCollections:
+    - m_ClassName: 
+      m_Collection: {fileID: 0}
 --- !u!222 &1900685946
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2687,8 +2690,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2737,7 +2740,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1937313239}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ccffa1d5888217f4eb057856134c2ebe, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2788,6 +2792,16 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &2032795940
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,13 +2828,13 @@ RectTransform:
   m_GameObject: {fileID: 2032795940}
   m_LocalRotation: {x: 0, y: 0, z: -.000488281221, w: .999999881}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.60000002, y: 1.29999995, z: 1}
+  m_LocalScale: {x: 1.59255862, y: 1.60126543, z: .99534899}
   m_Children: []
   m_Father: {fileID: 401758463}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .472128928, y: .410439253}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -122, y: 23}
+  m_AnchoredPosition: {x: -212, y: 25}
   m_SizeDelta: {x: 347.533051, y: 235.822021}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2032795942
@@ -2837,7 +2851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 0c66ef00884adce45b2447808da454e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f4b9aaa9f2ab5d49b78c196b8eaca96, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2882,7 +2896,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: .999971092, y: .999971211, z: .999971151}
   m_Children:
-  - {fileID: 1191513125}
   - {fileID: 1820835641}
   - {fileID: 574118085}
   m_Father: {fileID: 566314507}

@@ -23,6 +23,10 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 
 	Vector3 rightEdge = new Vector3(400f, 0f,0f);
 	Vector3 leftEdge = new Vector3(-400f, 0f,0f);
+	Vector3 downEdge = new Vector3 (0f, -390f, 0f);
+	Vector2 upEdge = new Vector3 (0f, 300f, 0f);
+
+
 	Vector3 PopupEdgeLeft = new Vector3 (200, 0,1);
 	Vector3 PopupEdgeRight = new Vector3 (1800, 0,1);
 	bool isActiveSlide;
@@ -96,12 +100,18 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 				} else if (myPos.x < leftEdge.x) {
 						exitLeft ();
 						panelController.previousSlide ();
-
-				} else {
+				} else if (myPos.y >  {
+					
+		}
+		
+		
+		} else {
 						if (this.isActiveSlide) {
 							moveToCenter ();
 						}
-				}
+				} 
+
+
 
 		}
 

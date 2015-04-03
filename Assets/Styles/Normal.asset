@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac2b6ab4dd444dbbab600921238ffba, type: 3}
+  m_Name: Normal
+  m_EditorClassIdentifier: 
+  m_CustomTextStyles:
+  - m_Tag: sub
+    m_TextStyle:
+      m_SizeScalar: .5
+      m_FontStyle: 0
+      m_ShouldReplaceColor: 0
+      m_ReplacementColor: {r: 1, g: 1, b: 1, a: 1}
+    m_VerticalOffset: -.100000001
+  - m_Tag: sup
+    m_TextStyle:
+      m_SizeScalar: .5
+      m_FontStyle: 0
+      m_ShouldReplaceColor: 0
+      m_ReplacementColor: {r: 1, g: 1, b: 1, a: 1}
+    m_VerticalOffset: .600000024
+  m_DefaultFontStyle: 0
+  m_DefaultLinkStyle:
+    m_VerticalOffset: 0
+    m_TextStyle:
+      m_SizeScalar: 1
+      m_FontStyle: 0
+      m_ShouldReplaceColor: 0
+      m_ReplacementColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Colors:
+      m_NormalColor: {r: .100000024, g: .239310101, b: 1, a: 1}
+      m_HighlightedColor: {r: .129999995, g: .75999999, b: 1, a: 1}
+      m_PressedColor: {r: .0799999982, g: .319999993, b: .629999995, a: 1}
+      m_DisabledColor: {r: .449999988, g: .540000021, b: .639999986, a: 1}
+      m_ColorMultiplier: 1
+      m_FadeDuration: .100000001
+    m_ColorTintMode: 1
+    m_ColorTweenMode: 0
+  m_DefaultTextColor: {r: .196999997, g: .196999997, b: .196999997, a: 1}
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_FontSize: 22
+  m_LineSpacing: 1.29999995
+  m_LinkStyles:
+  - m_ClassName: explanation
+    m_Style:
+      m_VerticalOffset: 0
+      m_TextStyle:
+        m_SizeScalar: 1.10000002
+        m_FontStyle: 0
+        m_ShouldReplaceColor: 0
+        m_ReplacementColor: {r: 1, g: 1, b: 1, a: 1}
+      m_Colors:
+        m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+        m_HighlightedColor: {r: .352941155, g: .75, b: .404957592, a: 1}
+        m_PressedColor: {r: .544442058, g: .698529422, b: .566195548, a: 1}
+        m_DisabledColor: {r: .449999988, g: .540000021, b: .639999986, a: 1}
+        m_ColorMultiplier: 1
+        m_FadeDuration: .100000001
+      m_ColorTintMode: 1
+      m_ColorTweenMode: 0
+  - m_ClassName: deeper
+    m_Style:
+      m_VerticalOffset: 0
+      m_TextStyle:
+        m_SizeScalar: 1
+        m_FontStyle: 0
+        m_ShouldReplaceColor: 0
+        m_ReplacementColor: {r: 1, g: 1, b: 1, a: 1}
+      m_Colors:
+        m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+        m_HighlightedColor: {r: .70036763, g: .75, b: .253676474, a: 1}
+        m_PressedColor: {r: .540781796, g: .566176474, b: .312229663, a: 1}
+        m_DisabledColor: {r: .449999988, g: .540000021, b: .639999986, a: 1}
+        m_ColorMultiplier: 1
+        m_FadeDuration: .100000001
+      m_ColorTintMode: 1
+      m_ColorTweenMode: 0
+  - m_ClassName: media
+    m_Style:
+      m_VerticalOffset: 0
+      m_TextStyle:
+        m_SizeScalar: 1
+        m_FontStyle: 0
+        m_ShouldReplaceColor: 0
+        m_ReplacementColor: {r: 1, g: 1, b: 1, a: 1}
+      m_Colors:
+        m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+        m_HighlightedColor: {r: .683823526, g: .281574368, b: .281574368, a: 1}
+        m_PressedColor: {r: .632352948, g: .027897913, b: .027897913, a: 1}
+        m_DisabledColor: {r: .449999988, g: .540000021, b: .639999986, a: 1}
+        m_ColorMultiplier: 1
+        m_FadeDuration: .100000001
+      m_ColorTintMode: 1
+      m_ColorTweenMode: 0
+  m_QuadStyles: []

@@ -28,6 +28,7 @@ public class PanelControl : MonoBehaviour {
 
 
 		currentChild = (LekeDra) children [index].gameObject.GetComponent ("LekeDra");
+		currentChild.enabled = true;
 
 	}
 	
@@ -71,7 +72,8 @@ public class PanelControl : MonoBehaviour {
 
 
 	}
-
+	
+	
 	public void nextSlide() {
 		if (index < children.Count -1) {
 				index += 1;
