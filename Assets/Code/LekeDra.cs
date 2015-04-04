@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using System.Collections;
 
 public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler {
 	
@@ -96,14 +94,10 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 
 		if (myPos.x > rightEdge.x) {
 						exitRight ();
-						panelController.nextSlide ();
+						panelController.previousSlide ();
 				} else if (myPos.x < leftEdge.x) {
 						exitLeft ();
-						panelController.previousSlide ();
-				} else if (myPos.y >  {
-					
-		}
-		
+						panelController.nextSlide ();
 		
 		} else {
 						if (this.isActiveSlide) {
