@@ -7,15 +7,20 @@ public class PanelControl : MonoBehaviour {
 	List<Transform> children;
 	int index = 0;
 	int lastIndex;
+	bool locked = false;
 	public LekeDra currentChild;
 	public AudioClip onSlideSound;
 	private AudioSource audioSource;
 	public List<GameObject> navButtons;
+	public InformationHandler ih;
+
 
 	void Awake() {
 		children = new List<Transform> ();
 		navButtons = new List<GameObject> ();
 		audioSource = (AudioSource) this.GetComponent ("AudioSource");
+		GameObject go = (GameObject) GameObject.Find ("InformationHandler");
+		ih = go.GetComponent<InformationHandler>();
 		int localIndex = 0;
 		foreach (Transform child in transform) {
 			children.Add(child);
@@ -56,6 +61,7 @@ public class PanelControl : MonoBehaviour {
 	}
 
 	public void getSlide(string side) {
+		closeCurrentWindow ();
 		Debug.Log ("Nåværende barn: " + currentChild);
 		audioSource.PlayOneShot (onSlideSound, 100f);
 		currentChild.setActiveSlide (false);
@@ -82,18 +88,19 @@ public class PanelControl : MonoBehaviour {
 	}
 
 	public void getSlide(int index) {
-				if (index != this.index) {
-						lastIndex = this.index;
-						audioSource.PlayOneShot (onSlideSound, 100f);
-						currentChild.setActiveSlide (false);
-						LekeDra gammel = currentChild;
-						LekeDra lekeDraObject = (LekeDra)children [index].gameObject.GetComponent ("LekeDra");
-						currentChild = lekeDraObject;
-						currentChild.setActiveSlide (true);
-						NavButton oldNavButton = (NavButton)navButtons [lastIndex].GetComponent ("NavButton");
-						NavButton navButton = (NavButton)navButtons [index].GetComponent ("NavButton");
-						navButton.check ();
-						oldNavButton.uncheck ();
+		closeCurrentWindow ();
+			if (index != this.index) {
+				lastIndex = this.index;
+				audioSource.PlayOneShot (onSlideSound, 100f);
+				currentChild.setActiveSlide (false);
+				LekeDra gammel = currentChild;
+				LekeDra lekeDraObject = (LekeDra)children [index].gameObject.GetComponent ("LekeDra");
+				currentChild = lekeDraObject;
+				currentChild.setActiveSlide (true);
+				NavButton oldNavButton = (NavButton)navButtons [lastIndex].GetComponent ("NavButton");
+				NavButton navButton = (NavButton)navButtons [index].GetComponent ("NavButton");
+				navButton.check ();
+				oldNavButton.uncheck ();
 
 						if (index < this.index) {
 								gammel.exitRight ();
@@ -134,7 +141,7 @@ public class PanelControl : MonoBehaviour {
 			lastIndex = index;
 			index = 0;
 			getSlide ("right");
-				}
+			}
 
 	}
 
@@ -148,6 +155,24 @@ public class PanelControl : MonoBehaviour {
 		index = children.Count - 1;
 		getSlide ("left");
 		}
+	}
+
+	public void closeCurrentWindow() {
+		ih.closeCurrentWindow ();
+		locked = false;
+	}
+
+
+	public void lockPanel() {
+		this.locked = true;
+	}
+
+	public void unlockPanel() {
+		this.locked = false;
+	}
+
+	public bool isLocked() {
+		return locked;
 	}
 
 

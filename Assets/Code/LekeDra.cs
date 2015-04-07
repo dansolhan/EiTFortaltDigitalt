@@ -3,12 +3,11 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler {
+public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler, IPointerClickHandler {
 	
 	private Vector2 pointerOffset;
 	private RectTransform canvasRectTransform;
 	private RectTransform panelRectTransform;
-	public PanelControl panelControl;
 	public Vector3 defaultPosition;
 	public float smooth;
 	private bool isDragged;
@@ -33,13 +32,13 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 	private Vector3 from;
 	private Vector3 to;
 
-	private PanelControl panelController;
+	private PanelControl panelControl;
 
 	
 	void Awake () {
 		Debug.Log ("Now boom!");
 		setActiveSlide (false);
-		panelController = (PanelControl) this.transform.parent.GetComponent ("PanelControl");
+		panelControl = (PanelControl) this.transform.parent.GetComponent ("PanelControl");
 
 
 		Canvas canvas = GetComponentInParent <Canvas>();
@@ -81,10 +80,17 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 		to = awayLeft;
 	}
 
+	public void OnPointerClick(PointerEventData data) {
+		panelControl.closeCurrentWindow ();
+	}
+	
+
 	public void OnPointerDown (PointerEventData data) {
-		isDragged = true;
-		panelRectTransform.SetAsLastSibling ();
-		RectTransformUtility.ScreenPointToLocalPointInRectangle (panelRectTransform, data.position, data.pressEventCamera, out pointerOffset);
+		if (!panelControl.isLocked()) {
+			isDragged = true;
+			panelRectTransform.SetAsLastSibling ();
+			RectTransformUtility.ScreenPointToLocalPointInRectangle (panelRectTransform, data.position, data.pressEventCamera, out pointerOffset);
+			}
 
 	}
 
@@ -94,10 +100,10 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 
 		if (myPos.x > rightEdge.x) {
 						exitRight ();
-						panelController.previousSlide ();
+						panelControl.previousSlide ();
 				} else if (myPos.x < leftEdge.x) {
 						exitLeft ();
-						panelController.nextSlide ();
+						panelControl.nextSlide ();
 		
 		} else {
 						if (this.isActiveSlide) {
@@ -111,22 +117,25 @@ public class LekeDra : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointe
 
 
 	public void OnDrag (PointerEventData data) {
-		Debug.Log ("OwowowwowowowwowoW!");
-		float oldPos = canvasRectTransform.position.y;
-		if (panelRectTransform == null) {
-				return;
-				}
+				if (!panelControl.isLocked()) {
+						Debug.Log ("OwowowwowowowwowoW!");
+						float oldPos = canvasRectTransform.position.y;
+						if (panelRectTransform == null) {
+								return;
+						}
 		
-		Vector2 localPointerPosition;
-		if (RectTransformUtility.ScreenPointToLocalPointInRectangle (
-			canvasRectTransform, data.position, data.pressEventCamera, out localPointerPosition
-			)) {
+						Vector2 localPointerPosition;
+						if (RectTransformUtility.ScreenPointToLocalPointInRectangle (
+				canvasRectTransform, data.position, data.pressEventCamera, out localPointerPosition
+						)) {
 
-			Vector3 newPosition = localPointerPosition - pointerOffset;
-			newPosition.y = oldPos;
-			panelRectTransform.localPosition = newPosition;
+								Vector3 newPosition = localPointerPosition - pointerOffset;
+								newPosition.y = oldPos;
+								panelRectTransform.localPosition = newPosition;
+						}
+				}
+
 		}
-	}
 
 	private void performMove() {
 		panelRectTransform.localPosition = Vector3.Lerp(panelRectTransform.localPosition, to, smooth * Time.deltaTime);
