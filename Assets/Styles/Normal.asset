@@ -53,7 +53,7 @@ MonoBehaviour:
       m_VerticalOffset: 0
       m_TextStyle:
         m_SizeScalar: 1.10000002
-        m_FontStyle: 0
+        m_FontStyle: 1
         m_ShouldReplaceColor: 0
         m_ReplacementColor: {r: 1, g: 1, b: 1, a: 1}
       m_Colors:
@@ -70,7 +70,7 @@ MonoBehaviour:
       m_VerticalOffset: 0
       m_TextStyle:
         m_SizeScalar: 1
-        m_FontStyle: 0
+        m_FontStyle: 1
         m_ShouldReplaceColor: 0
         m_ReplacementColor: {r: 1, g: 1, b: 1, a: 1}
       m_Colors:
@@ -87,7 +87,7 @@ MonoBehaviour:
       m_VerticalOffset: 0
       m_TextStyle:
         m_SizeScalar: 1
-        m_FontStyle: 0
+        m_FontStyle: 1
         m_ShouldReplaceColor: 0
         m_ReplacementColor: {r: 1, g: 1, b: 1, a: 1}
       m_Colors:

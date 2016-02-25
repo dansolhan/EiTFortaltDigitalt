@@ -13,14 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CaseMatchMode: 1
   m_WordPrioritization: 1
-  m_Entries:
-  - m_Definition: 
-    m_MainForm:
-      m_PartOfSpeech: 0
-      m_Word: alliansesystemet
-    m_OtherForms: []
-  - m_Definition: 
-    m_MainForm:
-      m_PartOfSpeech: 0
-      m_Word: alliansesystemet
-    m_OtherForms: []
+  m_Entries: []

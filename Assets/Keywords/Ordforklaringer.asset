@@ -17,15 +17,25 @@ MonoBehaviour:
   - m_Definition: 
     m_MainForm:
       m_PartOfSpeech: 0
-      m_Word: Europa
-    m_OtherForms: []
-  - m_Definition: 
-    m_MainForm:
-      m_PartOfSpeech: 0
-      m_Word: Tyskland
-    m_OtherForms: []
-  - m_Definition: 
-    m_MainForm:
-      m_PartOfSpeech: 0
       m_Word: trippelententen
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: allianse
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: kansler
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: ultimatum
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: trippelalliansen
     m_OtherForms: []

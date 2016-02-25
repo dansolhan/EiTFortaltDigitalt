@@ -13,4 +13,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CaseMatchMode: 1
   m_WordPrioritization: 1
-  m_Entries: []
+  m_Entries:
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: "Den Svarte H\xE5nd"
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: komplisert system av allianser
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: drapet
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: kolonier
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: "forbund av mange sm\xE5 stater"
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: sparket
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: "konflikter p\xE5 Balkan"
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: stadig mer urolig
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: livet av Franz Ferdinand
+    m_OtherForms: []
+  - m_Definition: 
+    m_MainForm:
+      m_PartOfSpeech: 0
+      m_Word: Konflikten ble raskt til en verdenskrig
+    m_OtherForms: []

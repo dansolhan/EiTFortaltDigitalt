@@ -9,7 +9,7 @@ public class ProgramControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		Screen.SetResolution (1128, 635, true);
 	}
 	
 	// Update is called once per frame
@@ -18,8 +18,11 @@ public class ProgramControl : MonoBehaviour {
 	}
 
 	void Awake() {
-		extraData.SetActive (false);
-		mediaData.SetActive (false);
-		explainData.SetActive (false);
+	
+	}
+
+	public void endGame() {
+		Application.Quit();
+
 	}
 }

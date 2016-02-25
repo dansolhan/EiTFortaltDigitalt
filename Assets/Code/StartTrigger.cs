@@ -7,7 +7,7 @@ public class StartTrigger : MonoBehaviour {
 	public AudioSource introAudio;
 
 	void Awake() {
-		PC = (PanelControl) GameObject.Find("InformationPanel").GetComponent("PanelControl");
+		PC = (PanelControl) GameObject.Find("Canvas/InformationPanel").GetComponent("PanelControl");
 	}
 
 	void Start () {

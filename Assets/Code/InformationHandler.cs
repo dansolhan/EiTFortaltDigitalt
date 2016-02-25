@@ -1,19 +1,23 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Candlelight.UI;
 using UnityEngine.UI;
-
+using System.Text.RegularExpressions;
 
 public class InformationHandler : MonoBehaviour {
 
 	GameObject currentWindow;
 	PanelControl pc;
+	public WordDefinitions definitions;
+	public DetailedDefinitions detailedDefinitions;
+	public Canvas currentCanvas;
+
+
 
 	// Use this for initialization
 	void Start () {
-	GameObject pcObject = GameObject.Find ("PanelControl");
+	GameObject pcObject = GameObject.Find ("Canvas/InformationPanel");
 	pc = (PanelControl) pcObject.GetComponent("PanelControl");
-	
 	}
 	
 	// Update is called once per frame
@@ -28,30 +32,61 @@ public class InformationHandler : MonoBehaviour {
 			Destroy(currentWindow);
 			}
 
+		Transform currentTransform;
+		GameObject parentObject;
+		Debug.Log (linkInfo.ClassName);
+
 		switch (linkInfo.ClassName) {
 			case("explanation"):
 			window = Instantiate(Resources.Load("windows/ExplanationInformation", typeof(GameObject))) as GameObject;
-			Transform transform = window.transform.Find("Canvas/Panel/ExplainedWord") as Transform;
-			Debug.Log (transform);
-			GameObject parent = transform.gameObject;
-			Text explainedWord = (Text) parent.GetComponent<Text>();
-			explainedWord.text = "Yep!";
+			window.transform.SetParent(currentCanvas.transform,false);
+			currentTransform = window.transform.Find("Canvas/Panel/ExplainedWord") as Transform;
+			Debug.Log (currentTransform);
+			parentObject = currentTransform.gameObject;
+			Text explainedWord = (Text) parentObject.GetComponent<Text>();
 
-			transform = window.transform.Find("Canvas/Panel/WordExplanation") as Transform;
-			Debug.Log (transform);
-			parent = transform.gameObject;
-			Text wordExplained = (Text) parent.GetComponent<Text>();
-			wordExplained.text = "This is a description of sorts!";
+			string topicText = Regex.Replace(linkInfo.Id, " ", "");
+			char[] a = topicText.ToCharArray();
+			a[0] = char.ToUpper(a[0]);
+			explainedWord.text = new string(a);
+
+			Debug.Log (source.GetLinkKeywordCollections());
+
+
+			currentTransform = window.transform.Find("Canvas/Panel/WordExplanation") as Transform;
+			Debug.Log (currentTransform);
+			parentObject = currentTransform.gameObject;
+			Text wordExplained = (Text) parentObject.GetComponent<Text>();
+			string topicDescription = definitions.getDefinition(linkInfo.Id);
+			wordExplained.text = topicDescription;
 			currentWindow = window;
 			break;
 
-			case("detailed"):
+			case("deeper"):
+			window = Instantiate(Resources.Load("windows/DetailedInformation", typeof(GameObject))) as GameObject;
+			currentTransform = window.transform.Find("MainPanel") as Transform;
+			window.transform.SetParent (currentCanvas.transform,false);
+			Transform titleTransform = (Transform) window.transform.Find ("MainPanel/detailedTitle");
+			GameObject titleObject = titleTransform.gameObject;
 
+			Text title = (Text) titleObject.GetComponent("Text");
+			char[] b = linkInfo.Id.ToCharArray();
+			b[0] = char.ToUpper(b[0]);
+			title.text = new string(b);
+
+			pc.lockPanel();
+
+			Transform detailedTransform = window.transform.Find ("MainPanel/DetailedText/TEXT");
+			GameObject detailedObject = detailedTransform.gameObject;
+			Text detailed = (Text) detailedObject.GetComponent("Text");
+			detailed.text = detailedDefinitions.getDefinition(linkInfo.Id);
+			currentWindow = window;
 			break;
 
 			case("media"):
-
 			break;
+
+			default: {break;}
 
 		}
 

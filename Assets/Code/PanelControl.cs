@@ -7,7 +7,7 @@ public class PanelControl : MonoBehaviour {
 	List<Transform> children;
 	int index = 0;
 	int lastIndex;
-	bool locked = false;
+	bool locked;
 	public LekeDra currentChild;
 	public AudioClip onSlideSound;
 	private AudioSource audioSource;
@@ -41,12 +41,15 @@ public class PanelControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			previousSlide();
+			if (!isLocked()) {
+				previousSlide ();
 				}
+			}
 		if (Input.GetKeyDown (KeyCode.RightArrow)) {
-			nextSlide();
+			if (!isLocked()) {
+				nextSlide ();
 				}
-	
+			}
 	}
 
 	public void startSlider() {
@@ -125,9 +128,10 @@ public class PanelControl : MonoBehaviour {
 
 	public void createNavButton(int localIndex) {
 		GameObject button = Instantiate((GameObject)Resources.Load("NavButton"));
+		button.transform.parent = this.transform;
 		NavButton script = (NavButton) button.GetComponent ("NavButton");
 		navButtons.Add (button);
-		button.transform.position = new Vector2((localIndex%8f) - 6f, ((Mathf.Floor(-(localIndex/8)))-7.5f)/2);
+		button.transform.position = new Vector3((localIndex%8f) - 6f, ((Mathf.Floor(-(localIndex/8)))-7.5f)/2, 2.5f);
 		script.index = localIndex;
 	}
 	
@@ -164,15 +168,23 @@ public class PanelControl : MonoBehaviour {
 
 
 	public void lockPanel() {
+		Debug.Log ("Now locking!");
 		this.locked = true;
 	}
 
 	public void unlockPanel() {
+		Debug.Log ("Now Unlocking!");
 		this.locked = false;
 	}
 
 	public bool isLocked() {
+		Debug.Log ("This panel is locked = " + locked);
 		return locked;
+	}
+
+	public void onCloseButtonClick() {
+		ih.closeCurrentWindow ();
+		unlockPanel ();
 	}
 
 
